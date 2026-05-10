@@ -1,236 +1,452 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Happy Birthday Mum</title>
-  <link rel="stylesheet" href="style.css" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Birthday Mum</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+font-family:Georgia, serif;
+background:linear-gradient(to bottom,#000000,#2b0f16,#000000);
+overflow:hidden;
+color:#f5d6dc;
+}
+
+.page{
+width:100%;
+height:100vh;
+display:none;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+text-align:center;
+padding:50px;
+animation:fade 1.2s ease;
+}
+
+.active{
+display:flex;
+}
+
+h1{
+font-size:4rem;
+margin-bottom:30px;
+color:#d8a1ab;
+text-shadow:0 0 20px rgba(216,161,171,0.5);
+}
+
+h2{
+margin-top:25px;
+font-size:2rem;
+color:#f0c7ce;
+}
+
+p{
+max-width:950px;
+font-size:1.3rem;
+line-height:2.1;
+color:#f5d6dc;
+margin-top:20px;
+}
+
+ul{
+list-style:none;
+max-width:1000px;
+margin-top:20px;
+}
+
+li{
+font-size:1.2rem;
+line-height:2;
+margin:25px 0;
+padding:20px;
+border:1px solid rgba(216,161,171,0.3);
+border-radius:20px;
+background:rgba(255,255,255,0.03);
+backdrop-filter:blur(5px);
+}
+
+button{
+margin-top:50px;
+padding:16px 45px;
+background:transparent;
+border:2px solid #d8a1ab;
+color:#d8a1ab;
+border-radius:50px;
+font-size:1rem;
+cursor:pointer;
+transition:0.4s;
+}
+
+button:hover{
+background:#d8a1ab;
+color:black;
+box-shadow:0 0 30px #d8a1ab;
+transform:scale(1.05);
+}
+
+.glow{
+position:absolute;
+border-radius:50%;
+filter:blur(100px);
+opacity:0.2;
+animation:pulse 6s infinite alternate;
+}
+
+.glow1{
+width:350px;
+height:350px;
+background:#b76e79;
+top:5%;
+left:5%;
+}
+
+.glow2{
+width:450px;
+height:450px;
+background:#d8a1ab;
+bottom:5%;
+right:5%;
+}
+
+@keyframes fade{
+from{
+opacity:0;
+transform:translateY(20px);
+}
+
+to{
+opacity:1;
+transform:translateY(0);
+}
+}
+
+@keyframes pulse{
+from{
+transform:scale(1);
+}
+
+to{
+transform:scale(1.2);
+}
+}
+
+@media(max-width:768px){
+
+h1{
+font-size:2.5rem;
+}
+
+p{
+font-size:1rem;
+line-height:1.9;
+}
+
+li{
+font-size:1rem;
+}
+
+}
+
+</style>
 </head>
+
 <body>
 
-  <audio id="bgMusic" loop>
-    <source src="music.mp3" type="audio/mp3">
-  </audio>
+<div class="glow glow1"></div>
+<div class="glow glow2"></div>
 
-  <div class="container">
+<audio id="bgMusic" loop>
+<source src="music.mp3" type="audio/mp3">
+</audio>
 
-    <section class="page active">
-      <h1>Happy Birthday Mum</h1>
-      <p>
-        Today is not just a celebration of another year... it is a celebration of your strength, your kindness, your sacrifices, and the endless love you have given every single day. Through every difficult moment, every challenge, and every season of life, you remained a source of comfort, wisdom, and peace for everyone around you. Even when life became overwhelming, you still found ways to smile, support others, and carry the family forward with grace.
+<section class="page active">
 
-        There are countless sacrifices you made that words could never fully describe — the sleepless nights, the silent worries, the prayers, the encouragement, and the unconditional love you gave so freely. You spent so much of your life making sure everyone else was okay, often placing others before yourself.
+<h1>Happy Birthday Mum</h1>
 
-        This little space was made specially for you, not because a website could ever repay everything you have done, but because you deserve to be celebrated in the most beautiful way possible. Today is about reminding you how deeply loved, appreciated, respected, and treasured you truly are.
-      </p>
-      <button onclick="nextPage()">Begin The Journey</button>
-    </section>
+<p>
+Today is not just a celebration of another year...
+it is a celebration of your strength, your kindness,
+your sacrifices, and the endless love you have given every single day.
+Through every difficult moment, every challenge, and every season of life,
+you remained a source of comfort, wisdom, and peace for everyone around you.
+</p>
 
-    <section class="page">
-      <h1>A Tribute To You</h1>
-      <p>
-        Behind every smile you gave us were sacrifices we didn’t always see. There were moments when you carried pain silently, moments when you stayed strong even when life felt overwhelming, and moments when you chose love even during difficult times. Yet somehow, you carried every burden with grace.
+<p>
+There are countless sacrifices you made that words could never fully describe —
+the sleepless nights, the silent worries, the prayers,
+the encouragement, and the unconditional love you gave so freely.
+Even when life became overwhelming,
+you still found ways to smile, support others,
+and carry the family forward with grace.
+</p>
 
-        Your strength built this family. Your patience held it together. Your wisdom guided us during difficult moments, and your love made every place feel safe. You have always been the heart of this home — the person everyone could depend on, the one who brought comfort during hard days, and the light that brightened even the darkest moments.
+<p>
+This little space was made specially for you,
+not because a website could ever repay everything you have done,
+but because you deserve to be celebrated in the most beautiful way possible.
+Today is about reminding you how deeply loved,
+appreciated, respected, and treasured you truly are.
+</p>
 
-        Thank you for every lesson, every sacrifice, every word of encouragement, and every moment you spent helping us become better people. Your impact on our lives can never truly be measured.
-      </p>
-      <button onclick="nextPage()">Next</button>
-    </section>
+<button onclick="nextPage()">Begin The Journey</button>
 
-    <section class="page">
-      <h1>Memory Lane</h1>
-      <p>
-        Every lesson, every laugh, every conversation, and every little moment shared with you became memories that will stay forever. Some memories are loud and unforgettable, while others are quiet moments that still remain deeply meaningful.
+</section>
 
-        The way you always knew how to comfort others, the way you encouraged us to keep moving forward, and the way your presence alone could bring peace into a room are things we will always carry with us.
+<section class="page">
 
-        Life moves quickly, but the love and memories you created continue to stay in our hearts. They remind us every day how fortunate we are to have you in our lives.
-      </p>
-      <button onclick="nextPage()">Next</button>
-    </section>
+<h1>A Tribute To You</h1>
 
-    <section class="page">
-      <h1>Your Beautiful Impact</h1>
-      <p>
-        Your love brings warmth and peace wherever you go. You have a way of making people feel cared for, understood, and protected simply through your presence. Even during difficult moments, your kindness continues to shine brightly.
+<p>
+Behind every smile you gave us were sacrifices we didn’t always see.
+There were moments when you carried pain silently,
+moments when you stayed strong even when life felt overwhelming,
+and moments when you chose love even during difficult times.
+Yet somehow, you carried every burden with grace.
+</p>
 
-        Your strength inspires everyone around you. You taught us that true strength is not just about surviving difficult times, but about continuing to love, support, and uplift others even during those moments.
+<p>
+Your strength built this family.
+Your patience held it together.
+Your wisdom guided us during difficult moments,
+and your love made every place feel safe.
+You have always been the heart of this home —
+the person everyone could depend on,
+the one who brought comfort during hard days,
+and the light that brightened even the darkest moments.
+</p>
 
-        The impact you have made on this family and on everyone fortunate enough to know you is something truly special. Your love leaves a mark that can never fade.
-      </p>
-      <button onclick="nextPage()">Next</button>
-    </section>
+<p>
+Thank you for every lesson,
+every sacrifice,
+every word of encouragement,
+and every moment you spent helping us become better people.
+Your impact on our lives can never truly be measured.
+</p>
 
-    <section class="page">
-      <h1>Reasons We Love You</h1>
-      <ul>
-        <li>Your kindness that comforts everyone around you</li>
-        <li>Your strength during difficult moments</li>
-        <li>Your patience even when things became stressful</li>
-        <li>Your wisdom and guidance throughout life</li>
-        <li>Your laughter that brightens every room</li>
-        <li>Your unconditional love that never fades</li>
-        <li>Your sacrifices that helped shape this family</li>
-        <li>Your ability to make everyone feel safe and cared for</li>
-        <li>Your beautiful heart and selfless nature</li>
-        <li>The endless support you continue to give every day</li>
-      </ul>
-      <button onclick="nextPage()">Next</button>
-    </section>
+<button onclick="nextPage()">Next</button>
 
-    <section class="page">
-      <h1>Birthday Wishes</h1>
-      <p>
-        May this year bring you endless happiness, peace, laughter, love, and beautiful memories. May every day ahead be filled with moments that make you smile, people who appreciate your worth, and blessings that return the love you have spent your life giving others.
+</section>
 
-        You deserve rest after all your hard work, joy after every difficult season, and peace after every challenge you have overcome. I hope this new chapter brings you comfort, good health, unforgettable experiences, and countless reasons to feel proud and happy.
+<section class="page">
 
-        No matter how much time passes, one thing will always remain true: you are deeply loved, deeply appreciated, and incredibly important to the people around you.
-      </p>
-      <button onclick="nextPage()">Next</button>
-    </section>
+<h1>Memory Lane</h1>
 
-    <section class="page">
-      <h1>Happy Birthday Mum</h1>
-      <p>
-        Thank you for being the heart of our family. Thank you for every sacrifice, every prayer, every lesson, every word of encouragement, and every moment of love you have given throughout the years.
+<p>
+Every lesson, every laugh, every conversation,
+and every little moment shared with you became memories that will stay forever.
+Some memories are loud and unforgettable,
+while others are quiet moments that still remain deeply meaningful.
+</p>
 
-        You are more appreciated than words could ever explain. Your love has shaped lives, your strength has inspired people, and your presence has brought warmth into every moment.
+<p>
+The way you always knew how to comfort others,
+the way you encouraged us to keep moving forward,
+and the way your presence alone could bring peace into a room
+are things we will always carry with us.
+</p>
 
-        Today and always, may you be reminded of just how special you truly are. Happy Birthday Mum.
-      </p>
-      <h2>With Love, Always.</h2>
-      <button onclick="restartPages()">Replay Journey</button>
-    </section>
+<p>
+Life moves quickly,
+but the love and memories you created continue to stay in our hearts.
+They remind us every single day how fortunate we are to have you.
+</p>
 
-  </div>
+<button onclick="nextPage()">Next</button>
 
-  <script src="script.js"></script>
-</body>
-</html>
+</section>
 
+<section class="page">
 
+<h1>Your Beautiful Impact</h1>
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+<p>
+Your love brings warmth and peace wherever you go.
+You have a way of making people feel cared for,
+understood, and protected simply through your presence.
+Even during difficult moments,
+your kindness continues to shine brightly.
+</p>
 
-body {
-  font-family: Georgia, serif;
-  background: linear-gradient(to bottom, #000000, #2b0f16, #000000);
-  color: white;
-  overflow: hidden;
-}
+<p>
+Your strength inspires everyone around you.
+You taught us that true strength is not just about surviving difficult times,
+but about continuing to love,
+support,
+and uplift others even during those moments.
+</p>
 
-.container {
-  width: 100%;
-  height: 100vh;
-  position: relative;
-}
+<p>
+The impact you have made on this family
+and on everyone fortunate enough to know you
+is something truly special.
+Your love leaves a mark that can never fade.
+</p>
 
-.page {
-  width: 100%;
-  height: 100vh;
-  display: none;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  padding: 40px;
-  animation: fade 1s ease;
-}
+<button onclick="nextPage()">Next</button>
 
-.page.active {
-  display: flex;
-}
+</section>
 
-h1 {
-  font-size: 4rem;
-  color: #d8a1ab;
-  margin-bottom: 30px;
-}
+<section class="page">
 
-h2 {
-  margin-top: 20px;
-  color: #f0c7ce;
-}
+<h1>Reasons We Love You</h1>
 
-p {
-  max-width: 800px;
-  font-size: 1.4rem;
-  line-height: 2;
-  color: #f5f5f5;
-}
+<ul>
 
-ul {
-  list-style: none;
-  margin-top: 20px;
-}
+<li>
+Your kindness that has comforted and uplifted everyone around you,
+even during moments when you were facing difficulties yourself.
+</li>
 
-li {
-  margin: 15px 0;
-  font-size: 1.5rem;
-}
+<li>
+Your strength during hard times,
+and the way you continued moving forward with courage
+even when life became overwhelming.
+</li>
 
-button {
-  margin-top: 50px;
-  padding: 15px 40px;
-  background: transparent;
-  border: 2px solid #d8a1ab;
-  color: #d8a1ab;
-  border-radius: 40px;
-  font-size: 1rem;
-  cursor: pointer;
-  transition: 0.4s;
-}
+<li>
+Your patience through every challenge,
+every stressful moment,
+and every situation that required understanding and love.
+</li>
 
-button:hover {
-  background: #d8a1ab;
-  color: black;
-  box-shadow: 0 0 25px #d8a1ab;
-}
+<li>
+Your wisdom and guidance that have helped shape lives,
+teach valuable lessons,
+and inspire better decisions every day.
+</li>
 
-@keyframes fade {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
+<li>
+Your unconditional love that never fades,
+never weakens,
+and continues to make everyone around you
+feel safe, valued, and deeply cared for.
+</li>
 
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
+</ul>
 
+<button onclick="nextPage()">Next</button>
 
+</section>
 
-const pages = document.querySelectorAll('.page');
-const music = document.getElementById('bgMusic');
+<section class="page">
+
+<h1>Birthday Wishes</h1>
+
+<p>
+May this year bring you endless happiness,
+peace,
+laughter,
+love,
+and beautiful memories.
+May every day ahead be filled with moments that make you smile,
+people who appreciate your worth,
+and blessings that return the love you have spent your life giving others.
+</p>
+
+<p>
+You deserve rest after all your hard work,
+joy after every difficult season,
+and peace after every challenge you have overcome.
+I hope this new chapter brings you comfort,
+good health,
+unforgettable experiences,
+and countless reasons to feel proud and happy.
+</p>
+
+<p>
+No matter how much time passes,
+one thing will always remain true:
+you are deeply loved,
+deeply appreciated,
+and incredibly important to the people around you.
+</p>
+
+<button onclick="nextPage()">Next</button>
+
+</section>
+
+<section class="page">
+
+<h1>Happy Birthday Mum</h1>
+
+<p>
+Thank you for being the heart of our family.
+Thank you for every sacrifice,
+every prayer,
+every lesson,
+every word of encouragement,
+and every moment of love you have given throughout the years.
+</p>
+
+<p>
+You are more appreciated than words could ever explain.
+Your love has shaped lives,
+your strength has inspired people,
+and your presence has brought warmth into every moment.
+</p>
+
+<p>
+Today and always,
+may you be reminded of just how special you truly are.
+Happy Birthday Mum.
+</p>
+
+<h2>With Love, Always.</h2>
+
+<button onclick="restartPages()">Replay Journey</button>
+
+</section>
+
+<script>
+
+const pages = document.querySelectorAll(".page");
+const music = document.getElementById("bgMusic");
 
 let currentPage = 0;
 
-function nextPage() {
-  pages[currentPage].classList.remove('active');
-  currentPage++;
+function nextPage(){
 
-  if (currentPage >= pages.length) {
-    currentPage = pages.length - 1;
-  }
+pages[currentPage].classList.remove("active");
 
-  pages[currentPage].classList.add('active');
+currentPage++;
 
-  music.play();
+if(currentPage >= pages.length){
+currentPage = pages.length - 1;
 }
 
-function restartPages() {
-  pages[currentPage].classList.remove('active');
-  currentPage = 0;
-  pages[currentPage].classList.add('active');
+pages[currentPage].classList.add("active");
+
+if(currentPage !== pages.length - 1){
+music.play();
 }
 
+if(currentPage === pages.length - 1){
+music.pause();
+music.currentTime = 0;
+}
 
+}
 
+function restartPages(){
+
+pages[currentPage].classList.remove("active");
+
+currentPage = 0;
+
+pages[currentPage].classList.add("active");
+
+}
+
+</script>
+
+</body>
+</html>
